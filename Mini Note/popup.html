@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Note</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>Mini Note</h1>
+      <i id="darkModeToggle" class="fas fa-moon"></i>
+    </div>
+
+    <div id="container">
+      <!-- Sidebar for Multiple Notes -->
+      <div id="sidebar">
+        <input type="text" id="searchInput" placeholder="Search notes" />
+
+        <ul id="notesList"></ul>
+        <button id="addNoteBtn"><i class="fas fa-plus"></i> Add Note</button>
+      </div>
+
+      <!-- Note Editor -->
+      <div id="editor">
+        <input type="text" id="noteTitle" placeholder="Title..." />
+        <textarea id="note" placeholder="Type your note here..."></textarea>
+        <div id="charCount">0 characters</div>
+
+        <!-- Color Picker -->
+        <label for="noteColor">Note Background Color:</label>
+        <input type="color" id="noteColor" value="#ffffff" />
+
+        <label for="textColor">Text Color:</label>
+        <input type="color" id="textColor" value="#000000" />
+
+        <!-- Buttons -->
+        <div id="buttonContainer">
+          <button id="saveBtn"><i class="fas fa-save"></i> Save Note</button>
+          <button id="copyNoteBtn">
+            <i class="fa-solid fa-clipboard"></i> CopyText
+          </button>
+          <button id="exportBtn">
+            <i class="fas fa-file-download"></i> Export Note
+          </button>
+          <button id="clearBtn">
+            <i class="fas fa-trash-alt"></i> Clear Text
+          </button>
+          <button id="deleteNoteBtn">
+            <i class="fas fa-trash-alt"></i> Delete Note
+          </button>
+
+          <button id="deleteAllNotesBtn" class="action-btn">
+            <i class="fas fa-trash-alt"></i> Delete All Notes
+          </button>
+        </div>
+
+        <!-- Save Confirmation -->
+        <div id="saveConfirmation">Note saved!</div>
+      </div>
+    </div>
+
+    <script src="assets/js/popup.js"></script>
+  </body>
+</html>
